@@ -1,0 +1,19 @@
+{% extends 'list/base.html' %}
+
+{% block content %}
+<h1 id="recipehead">Recipes</h1>
+{% for todo in todos %}
+<div class="well" style="height: 170px; overflow: hidden; padding-right: 30px">
+  <div class="post">
+    <div class="left">
+      <h1 id="todotitle"><a href="{% url 'todo_detail' pk=todo.pk %}">{{ todo.title }}</a></h1>
+      <p>Published: {{ todo.deadline_date }}</p>
+    </div>
+    <div class="right" style="text-align: center;">
+      <img class="image" src="https://img.grouponcdn.com/deal/mbyUEW6TfTGgb28PJUor/fG-2048x1229/v1/c700x420.jpg" style="position: relative; right: 20px;"/>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
+170

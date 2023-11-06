@@ -1,0 +1,119 @@
+.page-header {
+  background-color: #272727;
+  text-align: center;
+  padding: 20px 20px 20px 40px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  width: 100%;
+  position: relative;
+  top: 0px;
+}
+
+.page-header h1, .page-header h1 a:active, .page-header h1 a {
+  color: #fcfbf9;
+  font-size: 36pt;
+  text-decoration: none;
+}
+
+.page-footer {
+  background-color: #272727;
+  margin-top: 0;
+  text-align: center;
+  padding: 20px 20px 20px 40px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.page-header h1 a:hover, .page-header h1 a:visited, {
+  color: #fcfbf9;
+  font-size: 36pt;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Lobster', cursive;
+}
+
+.date {
+  color: #464646;
+}
+
+.image {
+  box-shadow: 0 7px 15px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  height: 100%;
+}
+
+.left{
+  float: left;
+  width: 60%;
+}
+
+.right{
+  float: right;
+  width: 30%;
+  margin-right: 30px;
+}
+
+.post-form textarea, .post-form input {
+  width: 100%;
+}
+
+.top-menu{
+  color: #fcfbf9;
+  float: right;
+  font-size: 26pt;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.post {
+  margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+  color: #000000;
+}
+
+.mainfield{
+  margin-top: 40px;
+}
+
+.detailpicture{
+  height: 150px;
+  width: 220px;
+  overflow: visible;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin: 25px;
+}
+
+.imagecaption{
+  font-family: 'Cambria' !important;
+  font-size: 20px !important;
+  text-align: center !important;
+}
+
+#shadow{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  width: 100%;
+}
+
+#height{
+  height: 150px;
+}
+
+#recipehead{
+  font-family: 'Lobster';
+  margin-bottom: 20px;
+}
+
+#todotitle{
+  font-family: 'Cambria';
+  font-size: 30px;
+}
+
+.mainimage{
+  width: 100% !important;
+  z-index: 0;
+  max-height: 20px !important;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}

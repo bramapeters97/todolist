@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<html>
+<head>
+  <title>Secrets of Sushi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/todo.css' %}">
+</head>
+
+<body>
+  <div>
+    <div class="page-header" id="shadow" style="width: 100%; position: relative; top: -40px">
+      {% if user.is_authenticated %}
+      <a href="{% url 'todo_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+      {% endif %}
+      <h1><a href="/">Secrets of Sushi</a></h1>
+    </div>
+  </div>
+
+  <div style="padding: 0px; margin: 0px; margin-top: -60px; margin-bottom: 60px; box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); ">
+    <div class="container-fluid" style="padding: 0px; position: relative; max-height: 250px; overflow: hidden;-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); object-position: bottom;">
+    <img src="http://www.sakeil.com/wp-content/uploads/2015/12/sushi-roll2-1610x600.jpg" style="width: 100%; z-index: 0; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);"/>
+    </div>
+  </div>
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="todo">
+        <h1>{{ todo.title }}: <p id="buttons"> {% if user.is_authenticated %}
+          <a class="btn btn-default" href="{% url 'todo_edit' pk=todo.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+          <a class="btn btn-default" href=""><span class="glyphicon glyphicon-trash"></span></a>
+          {% endif %} </p></h1>
+          {% if todo.deadline_date %}
+          <div class="date">
+            <p>{{ todo.deadline_date }}</p>
+          </div>
+          {% endif %}
+          <p>{{ todo.text|linebreaksbr }}</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <img src="http://restaurantsumo.com/wp-content/uploads/2017/01/sushi_and_sashimi_for_two.jpg" class="detailpicture">
+        <img src="https://img.grouponcdn.com/deal/fmPws6o2uTweCftZu7yj/p4-2048x1229/v1/c700x420.jpg" class="detailpicture">
+        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/01/13/10/sushi.jpg" class="detailpicture">
+      </div>
+      <div class="col-md-3">
+        <img src="http://4.bp.blogspot.com/-auZUbmJ2tNo/ViT7svuE0kI/AAAAAAAASQc/lxyJRM6Rx6c/s1600/5.JPG" class="detailpicture">
+        <img src="https://u.tfstatic.com/restaurant_photos/521/245521/169/612/kiyoshi-japanse-sushi-grill-restaurant-suggestie-van-de-chef-740b2.jpg" class="detailpicture">
+        <img src="https://img.grouponcdn.com/deal/dWvDkU5er8zm6Y6P5mST/nC-2048x1229/v1/c700x420.jpg" class="detailpicture">
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+  <footer style="background-color: #272727; color: fcfbf9; height: 40px; text-align: center; margin-top: 100px;">
+    <h1 style="font-family: 'Cambria'; font-size: 15px; padding-top: 10px;">Secrets of Sushi: Sushi Recipe Blog </h1>
+  </footer>
+
+</body>
